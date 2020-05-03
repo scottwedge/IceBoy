@@ -33,11 +33,11 @@ def fun1():
         message = soc.recv(1024)
         message = message.decode()
         if(message=='sendfile'):
-            pyautogui.alert( 'YOUR Friend WANTS TO SEND A FILE PRESS OK TO RECIEVE', "ALERT")
-            with open('recievedfile.zip', 'wb+') as output:
+            pyautogui.alert( 'YOUR Friend WANTS TO SEND A FILE PRESS OK TO RECEIVE', "ALERT")
+            with open('receivedfile.zip', 'wb+') as output:
                     rec = soc.recv(9000000)
                     output.write(rec)
-                    pyautogui.alert( "FILE RECIEVED",'ALERT')
+                    pyautogui.alert( "FILE RECEIVED",'ALERT')
             continue
         try:
             chat='Client > '+message+'\n'

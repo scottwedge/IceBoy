@@ -19,7 +19,7 @@ while 1:
         exit()
     soc.send(bytes(message,'UTF-8'))
     if (message == 'webcam'):
-        message = input("press s to recieve the image(press after 6 seconds for best quality): ")
+        message = input("press s to receive the image(press after 6 seconds for best quality): ")
         soc.send(bytes(message,'UTF-8'))
     if (message == 'audio'):
         message = input("ENTER NUMBER OF SECONDS: ")
@@ -29,7 +29,7 @@ while 1:
     with open('file.zip', 'wb+') as output:
         rec = soc.recv(9000000)
         output.write(rec)
-    popup2("FILE RECIEVED")
+    popup2("FILE RECEIVED")
 soc.close()
 
 

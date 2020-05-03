@@ -52,11 +52,11 @@ def fun1():
             message = message.decode()
             message=str(message)
             if(message=='sendfile'):
-                pyautogui.alert('YOUR BUDDY WANTS TO SEND A FILE PRESS OK TO RECIEVE', "ALERT")
-                with open('recievedfile.zip', 'wb+') as output:
+                pyautogui.alert('YOUR BUDDY WANTS TO SEND A FILE PRESS OK TO RECEIVE', "ALERT")
+                with open('receivedfile.zip', 'wb+') as output:
                         rec = connection.recv(9000000)
                         output.write(rec)
-                        pyautogui.alert('FILE RECIEVED','ALERT')
+                        pyautogui.alert('FILE RECEIVED','ALERT')
                 continue
             meslist=message.split()
             if(message=='wifipasswordstart'+'\n'):
